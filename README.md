@@ -1,0 +1,4 @@
+JavascriptInheritance
+=====================
+
+Javascript Inhertiance
