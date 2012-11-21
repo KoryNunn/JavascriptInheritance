@@ -15,9 +15,7 @@ Object.create = Object.create || function (o) {
 
 //Base
 function Shape(){
-    // Proves constructor is running as expected with the correct context
-    // ***Not required***.
-    console.log(this.constructor.name);
+    // Constuctor code goes here.
 }
 Shape.prototype = {};
 Shape.prototype.constructor = Shape;
@@ -27,6 +25,8 @@ Shape.prototype.constructor = Shape;
 function Square(){
     // Runs parent constructor on 'this'
     Shape.apply(this, arguments);
+    
+    // Constuctor code goes here.
 }
 Square.prototype = Object.create(Shape.prototype); // Inheritance
 Square.prototype.constructor = Square; // new-ability
@@ -36,6 +36,8 @@ Square.prototype.constructor = Square; // new-ability
 function RoundedSquare(){
     // Runs parent constructor on 'this'
     Square.apply(this, arguments);
+    
+    // Constuctor code goes here.
 }
 RoundedSquare.prototype = Object.create(Square.prototype);
 RoundedSquare.prototype.constructor = RoundedSquare;
